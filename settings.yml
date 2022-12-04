@@ -1,0 +1,94 @@
+---
+
+api_id: 27429611
+api_hash: a12ce1096e55627d007530abdbc8ffeb
+app_short_name: Telegram Android
+phone_number: "+6283189063858"
+# this has to be in quotes to ensure it is treated as a string
+# e.g. phone_number: "+18888675309"
+
+splay: 3
+# configurable randomness of when channels connect and messages are sent;
+# we recommend increasing this number when connecting to many (10+)
+# channels to avoid the dreaded FloodWaitError; it is preferable to use
+# prime numbers for maximum randomness
+
+messages:
+  one: |
+    CH BOKEP BOYS X BOYS (BXB)
+    https://t.me/+R-0mfCFCN_E0YjQ9
+    https://t.me/+ymynrbnUllk3MTE9
+    https://t.me/+C3eMTQpqG0E4N2M1
+  two: |
+    CH BOKEP BOYS X BOYS (BXB)
+    https://t.me/+R-0mfCFCN_E0YjQ9
+    https://t.me/+ymynrbnUllk3MTE9
+    https://t.me/+C3eMTQpqG0E4N2M1
+
+raid:
+  https://t.me/LPM_DDK_BBG_BBB_MMK:
+    message_type: one
+    # this is in seconds, so the below example is equal to 3 seconds
+    # we recommend at least 900 seconds, which is equal to 15 minutes
+    wait_interval: 20
+  https://t.me/LPM_Roleplayer_2:
+    message_type: two
+    # a channel can send multiple message types, so the below example will send messages `one` and `two`
+    # the bot will send one message per wait interval in sequence
+    wait_interval: 20
+  https://t.me/LPM_RPL1:
+    message_type: two
+    # a channel can send multiple message types, so the below example will send >
+    # the bot will send one message per wait interval in sequence
+    wait_interval: 20
+  https://t.me/LPM_RPP:
+    message_type: two
+    # a channel can send multiple message types, so the below example will send >
+    # the bot will send one message per wait interval in sequence
+    wait_interval: 20
+  https://t.me/lpm_roleplay:
+    message_type: two
+    # a channel can send multiple message types, so the below example will send >
+    # the bot will send one message per wait interval in sequence
+    wait_interval: 20
+  https://t.me/lpmroleplaygrup:
+    message_type: two
+    # a channel can send multiple message types, so the below example will send >
+    # the bot will send one message per wait interval in sequence
+    wait_interval: 20
+  https://t.me/LPM_BBG_MMK:
+    message_type: two
+    # a channel can send multiple message types, so the below example will send >
+    # the bot will send one message per wait interval in sequence
+    wait_interval: 20
+    message_type:
+    - one
+    - two
+    # this is in seconds, so the below example is equal to 5 minutes
+    # we recommend at least 900 seconds, which is equal to 15 minutes
+    wait_interval: 20
+    # this is in seconds, so the below example is equal to 1 minute
+    increase_wait_interval: 60
+    # a channel can limit the total number of messages sent, so the below example will send a maximum of 10 messages
+    total_messages: 999910
+    # this assumes the image's path is relative to the script `tg_shill_bot.py`
+    image: images/cd.jpg
+
+########################################################
+### !! DANGER ZONE !!
+### >> only config below if you know what you are doing
+########################################################
+# this is a Python lambda function -- it is used to construct a formatted message that
+# takes 2 inputs (random message 1 & random message 2) and returns a single string that
+# is appened to your primary message
+# this lambda will be eval'ed during runtime, so please becareful and know what you are doing
+# before modifying
+random_message_format: |
+  lambda rm1, rm2 : rm1 + " & " + rm2 + "!"
+
+# this is a list of random "thank yous" that will be used to create a random message
+# that will be appended to your primary message to avoid TG banning -- SEE FAQs
+random_message:
+- YANG SUKA BXB
+- CH BOKEP BXB
+- COME ON BOY
